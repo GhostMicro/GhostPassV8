@@ -26,7 +26,8 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
 
   const ROLES = ['Developer', 'Administrator', 'User', 'Member'];
-  const TYPES = ['Software', 'Hardware', 'Application'];
+  const TYPES = ['Software', 'Hardware', 'App'];
+  const PRODUCTS = ['IoT Smart Home', 'IoT Smart Farm', 'Robot'];
 
   const handleGenerate = () => {
     try {
@@ -113,13 +114,16 @@ export default function Home() {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-[9px] uppercase font-bold text-zinc-600 tracking-widest">3. Name Index</label>
-                  <input
-                    type="number" min="0" max="2047"
-                    value={formData.name || ''}
-                    onChange={(e) => setFormData({ ...formData, name: parseInt(e.target.value) || 0 })}
-                    className="w-full bg-zinc-900 border border-zinc-800 p-3 rounded text-xs text-white focus:border-primary outline-none"
-                  />
+                  <label className="text-[9px] uppercase font-bold text-zinc-600 tracking-widest">3. Product (Name)</label>
+                  <select
+                    value={formData.name}
+                    onChange={(e) => setFormData({ ...formData, name: parseInt(e.target.value) })}
+                    className="w-full bg-zinc-900 border border-zinc-800 p-3 rounded text-xs text-white focus:border-primary outline-none hover:border-cyan-500 transition-colors"
+                  >
+                    {PRODUCTS.map((p, i) => <option key={i} value={i}>{p}</option>)}
+                    <option disabled>--- Manual Index ---</option>
+                    <option value={999}>Custom (999+)</option>
+                  </select>
                 </div>
                 <div className="space-y-2 opacity-30">
                   <label className="text-[9px] uppercase font-bold text-zinc-600 tracking-widest">4. Reserved (Future)</label>
@@ -245,7 +249,7 @@ export default function Home() {
                   {[
                     { l: "Role", v: ROLES[decodedResult.data.role] || `Idx ${decodedResult.data.role}` },
                     { l: "Type", v: TYPES[decodedResult.data.type] || `Idx ${decodedResult.data.type}` },
-                    { l: "Name Idx", v: `#${decodedResult.data.name}` },
+                    { l: "Product", v: PRODUCTS[decodedResult.data.name] || `#${decodedResult.data.name}` },
                     { l: "Version", v: `v${decodedResult.data.version}` },
                     { l: "Model", v: decodedResult.data.model },
                     { l: "Prod Date", v: decodedResult.data.prodDate },
