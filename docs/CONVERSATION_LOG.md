@@ -10,7 +10,7 @@ This log records the evolution of user requests and the reasoning behind major a
 - **User Decision:** "ล้างระบบ กลับไปเป็น next.js ค่าเริ่มต้น" (Reset the system to Next.js default).
 - **Final Outcome:** Codebase purged of all Serial Key logic. System now at a clean-slate state.
 
-### **Session: GhostPass v8.1 (Secure Edition)**
+### **Session: GhostPass v8.2 (Secure Edition)**
 - **User Request:** Add a custom "Secret Salt" that the user can define to protect the 12-word seeds.
 - **Action Taken:** 
     - Updated `data/mnemonic.ts` to include `masterSecret` in the checksum calculation.

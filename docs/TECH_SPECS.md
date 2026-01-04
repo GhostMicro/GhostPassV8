@@ -8,10 +8,11 @@ Current technical configuration and architectural blueprints.
 - **Language:** TypeScript
 - **Dependencies:** Standard Next.js starter kit.
 
-## Future State: [GHOSTPASS MNEMONIC v8.1]
-- **Standard:** 12-Word Position-Based Mapping.
+## Future State: [GHOSTPASS MNEMONIC v8.2]
+- **Standard:** 12-Word Position-Based Mapping + Scrambling Layer.
 - **Wordlist:** 2048 words (BIP-39).
 - **Encoding:** Each word represents a specific data field (11 bits each).
+- **Security:** Position-based salting (Scrambling) for high entropy.
 - **Reserved:** Positions 4 and 11 are reserved for future metadata.
 - **Checksum:** Position 12 (HMAC-based or simple sum-check).
 
@@ -24,3 +25,4 @@ Current technical configuration and architectural blueprints.
 ## Active Files
 - `app/page.tsx`: Standard Next.js Home Page.
 - `docs/`: New persistence layer for project history.
+- `data/mnemonic.ts`: Core encoding/decoding engine with v8.2 scrambling logic.

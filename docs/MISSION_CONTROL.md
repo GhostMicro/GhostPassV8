@@ -4,7 +4,7 @@ This document tracks the high-level goals, current plans, and successful outcome
 
 ## 🎯 Current Objectives
 - [x] **Project Reset:** Revert the codebase to a clean Next.js state. (DONE)
-- [ ] **GhostPass Mnemonic (v8.1):** Implement a 12-word serial system where each word maps to a specific attribute:
+- [ ] **GhostPass Mnemonic (v8.2):** Implement a 12-word serial system where each word maps to a specific attribute:
     1. Role (Dev, Admin, User, Member)
     2. Type (Software, Hardware, App)
     3. Name

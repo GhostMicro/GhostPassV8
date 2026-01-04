@@ -59,7 +59,7 @@ export default function Home() {
           <div className="space-y-4">
             <div>
               <h1 className="text-white text-3xl font-black tracking-tighter uppercase italic">
-                GhostPass <span className="text-primary">v8.1</span>
+                GhostPass <span className="text-primary">v8.2</span>
               </h1>
               <p className="text-[10px] text-zinc-600 uppercase tracking-[0.4em] mt-2">Mnemonic Distribution System</p>
             </div>

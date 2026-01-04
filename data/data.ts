@@ -1,5 +1,5 @@
 /**
- * 📚 GHOSTPASS v8.1 Master Wordlist (BIP-39 Standard)
+ * 📚 GHOSTPASS v8.2 Master Wordlist (BIP-39 Standard)
  * 2048 words used for translating data bits into human-readable phrases.
  * Each word represents 11-bits of information.
  */
